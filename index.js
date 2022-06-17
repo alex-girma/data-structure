@@ -4,7 +4,13 @@
  *        - JS examples: indexOf | includes | find | findIndex => O(n)
  */
 
-
+const linearSearch = function (array, val) {
+	for (let index = 0; index < array.length; index++) {
+		if (val === array[index]) return index;
+	}
+	return -1;
+};
+console.log(linearSearch([1, 2, 3, 4, 5], 5));
 
 /**
  * NOTE: Binary Search
