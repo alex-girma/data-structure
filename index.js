@@ -21,6 +21,20 @@ console.log(linearSearch([1, 2, 3, 4, 5], 5));
  *        - => O(log n)
  */
 
+const binarySearch = function (array, val) {
+	let left = 0;
+	let right = array.length - 1;
+	let middle = Math.floor((left + right) / 2);
+	while (array[middle] !== val && left <= right) {
+		if (array[middle] > val) right = middle - 1;
+		else left = middle + 1;
+		middle = Math.floor((left + right) / 2);
+	}
+	return array[middle] === val ? middle : -1;
+};
+
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 9));
+
 
 
 const naiveStringSearch = function (string, word) {
