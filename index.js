@@ -61,21 +61,7 @@ for (let i = 0; i < 50; i++) {
  *        - A sorting algorithm where the largest values bubble up to the top!
  */
 
-const bubbleSort = function (array) {
-	let noSwaps;
-	for (let i = array.length; i > 0; i--) {
-		noSwaps = true;
-		for (let j = 0; j < i - 1; j++) {
-			if (array[j] > array[j + 1]) {
-				[array[j], array[j + 1]] = [array[j + 1], array[j]];
-				console.log("bubble");
-				noSwaps = false;
-			}
-		}
-		if (noSwaps) break;
-	}
-	return array;
-};
+
 
 //console.log(bubbleSort(array));
 
