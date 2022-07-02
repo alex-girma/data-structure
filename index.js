@@ -99,16 +99,4 @@ const selectionSort = function (array) {
 
 // console.log(selectionSort(array));
 
-const insertionSort = function (array) {
-	for (let i = 0; i < array.length; i++) {
-		for (let j = i + 1; j > 0; j--) {
-			console.log("inser");
 
-			if (array[j] > array[j - 1]) break;
-			if (array[j] < array[j - 1]) [array[j], array[j - 1]] = [array[j - 1], array[j]];
-		}
-	}
-	return array;
-};
-
-console.log(insertionSort(array));
